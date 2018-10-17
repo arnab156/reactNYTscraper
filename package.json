@@ -325,7 +325,8 @@
     "xdg-basedir": "^3.0.0",
     "yallist": "^3.0.2",
     "wrappy": "^1.0.2",
-    "ansi-regex": "^2.1.1"
+    "ansi-regex": "^2.1.1",
+    "node": "8.11.3"
   },
   "devDependencies": {},
   "scripts": {
