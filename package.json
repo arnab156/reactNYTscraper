@@ -357,6 +357,9 @@
     "type": "git",
     "url": "git+https://github.com/arnab156/reactNYTscraper.git"
   },
+  "engines":{
+    "node": "8.11.3"
+  },
   "author": "",
   "license": "ISC",
   "bugs": {
