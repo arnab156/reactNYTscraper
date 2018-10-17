@@ -358,6 +358,7 @@
     "url": "git+https://github.com/arnab156/reactNYTscraper.git"
   },
   "engines":{
+    "npm": "6.4.1",
     "node": "8.11.3"
   },
   "author": "",
