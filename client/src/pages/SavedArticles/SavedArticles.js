@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Container from '../../components/Container/Container';
-import Panel from '../../components/UI/Panel/Panel';
-import ArticleWell from '../../components/ArticleWell/ArticleWell';
+import Card from '../../components/Card/card';
+import ArticleScraped from '../../components/ArticleScraped/ArticleScraped';
 import myAPI from "../../utils/api/API";
 
 class SavedArticles extends Component {
@@ -31,7 +31,7 @@ class SavedArticles extends Component {
 
     if (this.state.savedArticles.length > 0) {
       saved = this.state.savedArticles.map((article, index) => {
-        return <ArticleWell
+        return <ArticleScraped
           key={article._id}
           articleId={article._id}
           headline={article.title}
@@ -46,9 +46,9 @@ class SavedArticles extends Component {
 
     return (
       <Container>
-        <Panel title="Saved Articles">
+        <Card title="Saved Articles">
          {saved}
-        </Panel>
+        </Card>
       </Container>
     )
   }

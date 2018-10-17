@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Container from '../../components/Container/Container';
 import SearchForm from '../../components/SearchForm/SearchForm';
-import Panel from '../../components/UI/Panel/Panel';
-import ArticleWell from '../../components/ArticleWell/ArticleWell';
+import Card from '../../components/Card/card';
+import ArticleScraped from '../../components/ArticleScraped/ArticleScraped';
 import nytAPI from "../../utils/nyt/API";
 import myAPI from "../../utils/api/API";
 
@@ -47,10 +47,11 @@ class Search extends Component {
 
   handleArticleSaved = ( event, id ) => {
     event.preventDefault();
-    console.log("inside the handle artivle saves in search js EVENT", event);
-    console.log("inside the handle artivle saves in search js ID", id);
+    // console.log("inside the handle article saves in search js EVENT", event);
+    
     const articleIndex = this.state.results.findIndex(result => result._id === id);
     const article = { ...this.state.results[articleIndex] };
+    console.log("inside the handle article saves in search js ID", id, " %%%article index%^%^^ ",articleIndex, " %%5article%%% ", article);
     myAPI.saveArticle({
       title: article.headline.main,
       author: article.source,
@@ -66,7 +67,7 @@ class Search extends Component {
     let searchResults = "Enter all fields to search posts.";
     if (this.state.showResults) {
       searchResults = this.state.results.map((article, index) => {
-        return <ArticleWell
+        return <ArticleScraped
           key={article._id}
           articleId={article._id}
           headline={article.headline.main}
@@ -80,13 +81,13 @@ class Search extends Component {
     }
     return (
       <Container>
-        <Panel title="Search for Articles">
+        <Card title="Search for Articles">
         <SearchForm 
           submit={this.handleFormSubmit} 
           changed={this.handleInputChange}
           labels={this.state.labels} />
-        </Panel>
-        <Panel title="Top Results">{searchResults}</Panel>
+        </Card>
+        <Card title="Top Results">{searchResults}</Card>
       </Container>
     );
   }
