@@ -102,7 +102,6 @@
     "fs-minipass": "^1.2.5",
     "function-bind": "^1.1.1",
     "fs.realpath": "^1.0.0",
-    "fsevents": "^1.2.4",
     "gauge": "^2.7.4",
     "get-value": "^2.0.6",
     "get-stream": "^3.0.0",
@@ -351,7 +350,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && yarn install && yarn run build"
+    "heroku-postbuild": "cd client && yarn install --production && yarn run build"
   },
   "repository": {
     "type": "git",
