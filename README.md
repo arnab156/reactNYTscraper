@@ -1,6 +1,7 @@
 # reactNYTscraper
 Go to https://dry-basin-84655.herokuapp.com/ to see the application. 
 
+In this app, you can search New York Times by Article and year range, and save/delete the articles as well.
 -------------------------------------------------------------------------------------------
 
 In this application you can:
